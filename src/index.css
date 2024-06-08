@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  appearance: none;
+}
+
+body {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.App {
+  padding: 2rem 1rem;
+  /* padding-bottom: 0; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 3rem;
+  height: 100%;
+}
+
+.legend {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.legend > div {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  align-items: center;
+}
+
+.legend .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.circle.completed {
+  background-color: #00d06c;
+}
+
+.circle.incompleted {
+  background-color: #e6e6e6;
+}
+
+.input_container {
+  border: 1px solid #e8e8e8;
+  border-radius: 5rem;
+  padding: 0.3rem 0.3rem 0.3rem 1rem;
+  width: clamp(300px, 100%, 500px);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input_container input {
+  font-size: 1rem;
+  flex: 1;
+}
+
+.input_container input::placeholder {
+  color: #b5b5b5;
+}
+
+.input_container .addBtn {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.tasks_container {
+  width: clamp(300px, 100%, 540px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tasks_container > span {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.tasks_container > span b {
+  color: #00d06c;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #e8e8e8;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: auto;
+  height: 100%;
+  scrollbar-width: none;
+}
+
+.tasks .task {
+  border: 1px solid #e8e8e8;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.task .status {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.task .content {
+  flex: 1;
+}
+
+.task:hover button {
+  visibility: visible;
+}
+
+.task button {
+  visibility: hidden;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
